@@ -1,4 +1,4 @@
 = IPC机制
-:hp-tags: tag1,tag2,tag3
+:hp-tags: note
 
-Lorem ipsum ......
+afdafd

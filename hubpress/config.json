@@ -8,8 +8,8 @@
   },
 
   "site":{
-    "title":"HubPress",
-    "logo":"http://hubpress.io/img/logo.png",
+    "title":"pan's blog",
+    "logo":"https://avatars2.githubusercontent.com/u/15864446?v=3&s=96",
     "postsPerPage":"10",
     "googleAnalytics":"UA-59472195-1",
     "disqus":"hubpress",
@@ -18,7 +18,7 @@
 
   "socialnetwork":{
     "twitter":"https://twitter.com/hubpressio",
-    "github":"https://github.com/hubpress"
+    "github":"https://github.com/jakkypan"
   },
 
   "theme":{

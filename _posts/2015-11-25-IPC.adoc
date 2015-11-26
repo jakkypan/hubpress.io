@@ -1,4 +1,4 @@
 = IPC机制
-:hp-tags: 安卓读书笔记
+:hp-tags: reader
 
 Lorem ipsum ......

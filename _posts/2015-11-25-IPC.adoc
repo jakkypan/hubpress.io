@@ -12,12 +12,19 @@
 * Parcelable，所有实现了Parcelable接口的对象
 * AIDL，所有的AIDL接口本身可以再AIDL文件中使用
 
-NOTE: Parcelable和AIDL对象在使用时，必须显式的import进来，不管是否存在于一个包中。
+> Parcelable和AIDL对象在使用时，必须显式的import进来，不管是否存在于一个包中。
 
-IMPORTANT: 在aidl文件中使用自定义的Parcelable对象，必须新建一个和该对象同名的AIDL文件，并声明为parcelable。
-[source,java]
-package com.test;
-parcelable Book;
+> 在aidl文件中使用自定义的Parcelable对象，必须新建一个和该对象同名的AIDL文件，并声明为parcelable。
+
+> 除了基本类型，其他类型都必须标上方向：in、out、inout
+
+> aidl的包结构在服务端和客户端应该保持一致，否则无法解析
+
+
+
+
+
+
 
 
 

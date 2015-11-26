@@ -1,4 +1,4 @@
-= My title
-:hp-tags: HubPress, Blog, Open Source
+= IPC机制
+:hp-tags: 安卓读书笔记
 
 Lorem ipsum ......

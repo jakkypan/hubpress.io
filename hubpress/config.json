@@ -1,9 +1,9 @@
 {
   "meta":{
     "username":"jakkypan",
-    "repositoryName":"jakkypan.hubpress.io",
+    "repositoryName":"jakkypan.github.io",
     "branch":"master",
-    "cname":"jakkypan.hubpress.io",
+    "cname":"jakkypan.github.io",
     "delay":"500"
   },
 
@@ -13,7 +13,7 @@
     "postsPerPage":"10",
     "googleAnalytics":"UA-59472195-1",
     "disqus":"hubpress",
-    "url":"http://jakkypan.hubpress.io"
+    "url":"http://jakkypan.github.io"
   },
 
   "socialnetwork":{
@@ -23,6 +23,6 @@
 
   "theme":{
     "name":"Roon",
-    "url":"//jakkypan.hubpress.io/themes/Roon"
+    "url":"//jakkypan.github.io/themes/Roon"
   }
 }

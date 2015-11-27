@@ -1,0 +1,56 @@
+= AsciiDoc的常用语法
+:hp-tags: tool
+
+A normal paragraph.
+
+ A sequence of lines that begin with at least one space is a literal 
+
+Another normal paragraph.
+
+---
+
+NOTE: An admonition paragraph draws the reader's attention to
+auxiliary information.
+Its purpose is determined by the label
+at the beginning of the paragraph.
+
+Here are the other built-in admonition types:
+
+TIP: Pro tip...
+
+IMPORTANT: Don't forget...
+
+WARNING: Watch out for...
+
+CAUTION: Ensure that...
+
+---
+
+_italic phrase_
+
+__i__talic le__tt__ers
+
+*bold phrase*
+
+**b**old le**tt**ers
+
+*_bold italic phrase_*
+
+**__b__**old italic le**__tt__**ers
+
+`monospace phrase` and le``tt``ers
+
+`_monospace italic phrase_` and le``__tt__``ers
+
+`*monospace bold phrase*` and le``**tt**``ers
+
+`*_monospace bold italic phrase_*` and le``**__tt__**``ers
+
+Werewolves are #allergic to cinnamon#.
+
+
+asdffdsafdssssfaf
+Do werewolves believe in [small]#small print#?
+
+[big]##O##nce upon an infinite loop.
+

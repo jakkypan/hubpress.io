@@ -23,7 +23,7 @@
     <meta property="og:description" content="AIDL通信 AIDL 文件的说明 支持的数据类型 基本数据类型 List，仅ArrayList Map，仅HashMap.. Parcelable，所有实现了Parcelable接口的对象 AIDL，所有的AIDL接口本身可以再AIDL文件中使用 Parcelable和AIDL对象在使用时，必须显式的import进来，不管是否存在于一个包中。 在aidl文件中使用自定义的Parcelable对象，必须新建一个和该对象同名的AIDL文件，并声明为parcelable。 除了基本类型，其他类型都必须标上方向：in、out、inout aidl的包结构在服..." />
     <meta property="og:url" content="http://jakkypan.github.io/2015/11/25/IPC.html" />
     <meta property="article:published_time" content="2015-11-24T16:00:00.000Z" />
-    <meta property="article:modified_time" content="2015-11-27T12:43:59.403Z" />
+    <meta property="article:modified_time" content="2015-11-27T15:32:53.670Z" />
     <meta property="article:tag" content="note" />
     
     <meta name="twitter:card" content="summary" />
@@ -46,7 +46,7 @@
     "headline": "IPC机制",
     "url": "http://jakkypan.github.io/2015/11/25/IPC.html",
     "datePublished": "2015-11-24T16:00:00.000Z",
-    "dateModified": "2015-11-27T12:43:59.403Z",
+    "dateModified": "2015-11-27T15:32:53.670Z",
     "keywords": "note",
     "description": "AIDL通信 AIDL 文件的说明 支持的数据类型 基本数据类型 List，仅ArrayList Map，仅HashMap.. Parcelable，所有实现了Parcelable接口的对象 AIDL，所有的AIDL接口本身可以再AIDL文件中使用 Parcelable和AIDL对象在使用时，必须显式的import进来，不管是否存在于一个包中。 在aidl文件中使用自定义的Parcelable对象，必须新建一个和该对象同名的AIDL文件，并声明为parcelable。 除了基本类型，其他类型都必须标上方向：in、out、inout aidl的包结构在服..."
 }
@@ -128,6 +128,19 @@
 <p>aidl的包结构在服务端和客户端应该保持一致，否则无法解析</p>
 </div>
 </blockquote>
+</div>
+<div class="paragraph">
+<p><mark>有个问题</mark></p>
+</div>
+<div class="paragraph">
+<p>所有传给server的对象，经过Binder时，binder都会把客户端传过来的对象转换成新的对象。所以，不能说在客户端上equals的对象，在server上也是equals的。</p>
+</div>
+<div class="paragraph">
+<p><mark>解决办法</mark></p>
+</div>
+<div class="paragraph">
+<p><em>RemoteCallbackList</em>
+内部实现了对象和binder的映射关系。binder在同一个进程中是不变的，这样可以保证即使对象变了，也能找到一一的映射。</p>
 </div>
 </div>
 </div>

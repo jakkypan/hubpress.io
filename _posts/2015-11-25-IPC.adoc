@@ -8,7 +8,7 @@
 . 支持的数据类型
 * 基本数据类型
 * List，仅ArrayList
-* Map，仅HashMap..
+* Map，仅HashMap
 * Parcelable，所有实现了Parcelable接口的对象
 * AIDL，所有的AIDL接口本身可以再AIDL文件中使用
 
@@ -44,5 +44,7 @@ server端是不稳定的，随时可能会死掉，所以需要知道连接断�
 
 权限的校验：保证服务端的访问是有限制的，不是随意性的访问。
 比如：onBind里校验、onTransact里校验
+
+== ContentProvider & ContentResolve
 
 

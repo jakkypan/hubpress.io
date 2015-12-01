@@ -1,5 +1,5 @@
 = IPC机制
-:hp-tags: note
+:hp-tags: note, anroid, ipc
 
 == AIDL通信
 

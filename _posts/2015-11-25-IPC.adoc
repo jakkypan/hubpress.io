@@ -29,3 +29,20 @@
 
 _RemoteCallbackList_
 内部实现了对象和binder的映射关系。binder在同一个进程中是不变的，这样可以保证即使对象变了，也能找到一一的映射。
+
+---
+
+server端是不稳定的，随时可能会死掉，所以需要知道连接断开，并重连。
+
+1）通过设置DeathRecipient监听；
+
+2）另外就是onServiceDisconnected
+
+两者的区别在于onServiceDisconnected是在主线程，而DeathRecipient实在客户端的Binder线程池中。
+
+---
+
+权限的校验：保证服务端的访问是有限制的，不是随意性的访问。
+比如：onBind里校验、onTransact里校验
+
+

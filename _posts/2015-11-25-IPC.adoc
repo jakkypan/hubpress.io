@@ -47,4 +47,11 @@ server端是不稳定的，随时可能会死掉，所以需要知道连接断�
 
 == ContentProvider & ContentResolve
 
+contentprovider的底层数据存储可以是数据库、可以是文件，甚至可以是内存对象。只要实现了query、update、insert、delete方法即可（存在多线程并发访问的问题）。
+
+#遗留问题#
+
+1）数据库的onUpgrade 和 onDowngrade怎么实现？
+
+2）sql注入的预防
 

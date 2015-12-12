@@ -3,55 +3,7 @@
 
 == AIDL通信
 
-*AIDL 文件的说明*
-
-. 支持的数据类型
-* 基本数据类型
-* List，仅ArrayList
-* Map，仅HashMap
-* Parcelable，所有实现了Parcelable接口的对象
-* AIDL，所有的AIDL接口本身可以再AIDL文件中使用
-
-> Parcelable和AIDL对象在使用时，必须显式的import进来，不管是否存在于一个包中。
-
-> 在aidl文件中使用自定义的Parcelable对象，必须新建一个和该对象同名的AIDL文件，并声明为parcelable。
-
-> 除了基本类型，其他类型都必须标上方向：in、out、inout
-
-> aidl的包结构在服务端和客户端应该保持一致，否则无法解析
+裤长 106~107
 
 
-#有个问题#
-
-所有传给server的对象，经过Binder时，binder都会把客户端传过来的对象转换成新的对象。所以，不能说在客户端上equals的对象，在server上也是equals的。
-
-#解决办法#
-
-_RemoteCallbackList_
-内部实现了对象和binder的映射关系。binder在同一个进程中是不变的，这样可以保证即使对象变了，也能找到一一的映射。
-
----
-
-server端是不稳定的，随时可能会死掉，所以需要知道连接断开，并重连。
-
-1）通过设置DeathRecipient监听；
-
-2）另外就是onServiceDisconnected
-
-两者的区别在于onServiceDisconnected是在主线程，而DeathRecipient实在客户端的Binder线程池中。
-
----
-
-权限的校验：保证服务端的访问是有限制的，不是随意性的访问。
-比如：onBind里校验、onTransact里校验
-
-== ContentProvider & ContentResolve
-
-contentprovider的底层数据存储可以是数据库、可以是文件，甚至可以是内存对象。只要实现了query、update、insert、delete方法即可（存在多线程并发访问的问题）。
-
-#遗留问题#
-
-1）数据库的onUpgrade 和 onDowngrade怎么实现？
-
-2）sql注入的预防
 
